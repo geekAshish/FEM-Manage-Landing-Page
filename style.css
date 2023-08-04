@@ -139,6 +139,18 @@ body {
   font-family: var(--ff-body);
 }
 
+p:not([class]) {
+  opacity: 0.6;
+  max-width: 32ch;
+}
+
+p[data-width="wide"] {
+  max-width: 44ch;
+}
+
+
+
+
 /* Button */
 
 .button {
@@ -256,7 +268,32 @@ body {
 
 
 
+/* cta */
 
+.cta {
+  position: relative;
+  isolation: isolate;
+  text-align: center;
+}
+
+@media (min-width: 50em) {
+  .cta {
+    text-align: left;
+  }
+}
+
+.cta::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  background-image: 
+    url(images/bg-tablet-pattern.svg),
+    url(images/bg-tablet-pattern.svg);
+  background-position: -15rem -5rem, 80rem -42rem;
+  background-repeat: no-repeat;
+  opacity: 0.1;
+}
 
 
 
@@ -291,7 +328,6 @@ body {
   display: grid;
   gap: 1rem;
 }
-
 @media (min-width: 50em) {
   .even-columns {
     grid-auto-flow: column;
@@ -300,8 +336,25 @@ body {
 }
 
 
-.flow > * + * {
-  outline: 4px solid cyan;
+.justify-self-end {
+  justify-self: end;
+}
+
+@media (min-width: 50em) {
+  .justify-self-end-md {
+    justify-self: end;
+  }
+}
+
+.vertical-align-center {
+  align-items: center;
+}
+
+
+
+
+:where(.flow :not(:first-child)) {
+  margin-top: var(--flow-spacer, 2em);
 }
 
 
