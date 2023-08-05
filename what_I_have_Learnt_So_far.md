@@ -36,3 +36,9 @@ when using :where() it doesn' override previous css
 
 # isolation: isolate;
 
+
+
+# CSS columns https://youtu.be/bRV7dQW9ZWE
+
+
+# SVG Sprite System
