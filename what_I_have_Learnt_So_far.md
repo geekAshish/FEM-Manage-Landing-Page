@@ -42,3 +42,6 @@ when using :where() it doesn' override previous css
 
 
 # SVG Sprite System
+
+
+# Box-shadow don't cause any overflow

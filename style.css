@@ -399,6 +399,45 @@ input:where([type="text"], [type="email"]) {
   opacity: 0.1;
 }
 
+/* Numbered Item */
+
+.numbered-item {
+  counter-reset: count;
+  margin-inline: auto;
+  width: fit-content;
+}
+
+.numbered-item li {
+  counter-increment: count;
+}
+
+.numbered-item div {
+  display: grid;
+  align-items: center;
+  gap: var(--size-400);
+  grid-template-columns: min-content 1fr;
+
+}
+
+.numbered-item p {
+  grid-column: 1 / -1;
+}
+
+.numbered-item div::before {
+  content: "0" counter(count);
+  background-color: var(--clr-accent-400);
+  color: var(--clr-neutral-100);
+  font-weight: var(--fw-bold);
+  padding: var(--size-200) var(--size-500);
+  border-radius: 100vw;
+}
+
+@media (min-width: 50em) {
+  .numbered-item p {
+    grid-column: 2 / -1;
+  }
+}
+
 
 
 
