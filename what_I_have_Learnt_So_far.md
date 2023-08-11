@@ -45,3 +45,6 @@ when using :where() it doesn' override previous css
 
 
 # Box-shadow don't cause any overflow
+
+
+# For creating slider, I uses https://a11yslider.js.org/
